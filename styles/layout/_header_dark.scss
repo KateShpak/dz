@@ -1,0 +1,113 @@
+@use "../base" as *;
+//noinspection ALL
+
+.header {
+   &__position {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    padding: 50px 0;
+  }
+
+  &__wrapper {
+    @include flexCenterVert;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    max-width: 130px;
+  }
+
+  &__menu {
+    @include fonts($fontBold, 16px, 20px);
+    min-height: 24px;
+  }
+}
+
+.info {
+  @include flexCenterVert;
+  justify-content: flex-end;
+  row-gap: 16px;
+  flex-wrap: wrap;
+  max-width: 478px;
+
+  &__item_active {
+    background: $colorAssent;
+  }
+
+  &__item {
+    padding: 5px 7px;
+    border-radius: 8px;
+    color: $colorWhite;
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.2);
+    }
+  }
+
+  &__lang {
+    margin-right: 6px;
+    @include fonts($fontBold, 12px, 15px);
+  }
+
+  &__address {
+    @include fonts($fontNormal, 16px, 20px);
+    color: $colorWhite;
+  }
+
+  &__phone {
+    @include fonts($fontBold, 16px, 20px);
+    color: $colorWhite;
+  }
+
+  svg {
+    fill: #FFFFFF;
+
+    &:hover {
+      fill: $colorAssent;
+    }
+  }
+}
+
+.contacts {
+  a {
+    @include inlineFlexCenterVert;
+    column-gap: 6px;
+
+    &::before {
+      content: '';
+      display: inline-block;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: $colorGreySeparator;
+    }
+  }
+}
+
+.logo {
+  &__img {
+    width: 100%;
+  }
+}
+
+.menu {
+  display: flex;
+  gap: 15px;
+  &__link {
+    color: $colorWhite;
+
+    &:hover {
+      border-bottom: $colorWhite solid 2px;
+    }
+
+    &_active {
+      color: $colorAssent;
+      border-bottom: $colorAssent solid 2px;
+    }
+  }
+}
+
+

@@ -1,0 +1,35 @@
+//colors
+
+$colorWhite: #FFFFFF;
+$colorBlack: #000000;
+
+$colorMain: #323264;
+$colorMainAlt: #46466E;
+$colorMainSoft: #686887;
+
+$colorAssent: #F0145A;
+$colorRegular: #24A3FF;
+$colorRegularHover: #0085FF;
+$colorRegularActive: #006CCF;
+
+$colorGreyBg: #F5F5FA;
+$colorGreyBgAlt: #EDEDF7;
+$colorGreyText: #B3B3BA;
+$colorGreySeparator: #E6E6F0;
+
+//fonts
+
+$fontFamily: 'Montserrat', 'sans-serif';
+$fontNormal: 400;
+$fontBold: 700;
+
+//container breakpoints
+
+$maxWidthDescHD: 1720px;
+$maxWidthDescSD: 1440px;
+$maxWidthTabHD: 1024px;
+$maxWidthTabSD: 768px;
+$maxWidthMob: 375px;
+
+//technical
+$outline: 1px, solid, #F0145A;

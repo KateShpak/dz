@@ -1,0 +1,40 @@
+@use "../../base" as *;
+
+.staff-slider {
+  &__breadcrumb {
+    display: block;
+    @include fonts($fontBold, 14px, 17px);
+    color: $colorRegular;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin: 0 0 10px 0;
+
+    &:hover {
+      color: $colorAssent;
+
+      &:after {
+        content: url("/images/arrov_active.svg");
+      }
+    }
+    &:after {
+      margin-left: 5px;
+      content: url("/images/arrov.svg");
+    }
+  }
+  &__title{
+    @include fonts($fontBold, 38px, 46px);
+    background-image: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 0 0 60px 0;
+  }
+  &__sub{
+    @include fonts($fontBold, 16px, 20px);
+    color:$colorGreyText;
+    }
+
+  &__post{
+    @include fonts($fontNormal, 14px, 22px);
+    color: $colorGreyText;
+  }
+}

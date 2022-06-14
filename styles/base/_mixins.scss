@@ -1,0 +1,116 @@
+//gradients----------------------------------------------------
+
+@mixin linear-gradient($direction, $fromColor, $middleColor, $toColor){
+  background: linear-gradient($direction*1deg, $fromColor, $middleColor, $toColor);
+}
+
+
+//button-------------------------------------------------
+@mixin buttonStyle($color: null, $bgk: null, $weight: null, $size: null) {
+  @if $color {
+    color: $color;
+  }
+  @if $bgk {
+    background: $bgk;
+  }
+  @if $weight {
+    font-weight: $weight;
+  }
+  @if $size {
+    font-size: $size;
+  }
+}
+
+@mixin buttonSize($minWidth, $paddingVert, $paddingHor) {
+  min-width: $minWidth;
+  padding: $paddingVert $paddingHor;
+}
+
+
+//grid------------------------------------------------------------
+@mixin gridLayout($minHighUp, $minHighDown){
+  display: grid;
+  min-height: 100vh;
+  grid-template: minmax($minHighUp, auto) 1fr minmax($minHighDown, auto) / 1fr;
+  grid-template-areas:
+  "header"
+  "main"
+  "footer";
+}
+
+// flex----------------------------------------------------
+@mixin flexCenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flexCenterVert {
+  display: flex;
+  align-items: center;
+}
+
+@mixin inlineFlexCenterVert {
+  display: inline-flex;
+  align-items: center;
+}
+
+@mixin flexCenterHoriz {
+  display: flex;
+  justify-content: center;
+}
+
+@mixin flexDirection{
+  display: flex;
+  flex-direction: column;
+}
+//-------------------------------------------------------------
+@mixin linkStyles($color, $colorHover) {
+  a {
+    text-decoration: underline $color;
+
+    &:hover {
+      text-decoration: underline $colorHover;
+    }
+  }
+}
+//fonts--------------------------------------------------------------
+@mixin fonts($fontWait, $fontSize, $lineHeight: 1.2rem) {
+  font-weight: $fontWait;
+  font-size: $fontSize;
+  line-height: $lineHeight;
+}
+
+//container-----------------------------------------------------
+@mixin containerWrap($padding, $maxWidth) {
+  padding: 0 $padding;
+  max-width: $maxWidth;
+}
+
+//breakpoints-----------------------------------------------
+@mixin DescHD {
+  @media only screen and (max-width: 1920px) {
+    @content;
+  }
+
+}@mixin DescSD {
+  @media only screen and (max-width: 1440px) {
+    @content;
+  }
+
+}@mixin TabHD {
+  @media only screen and (max-width: 1024px) {
+    @content;
+  }
+
+}@mixin TabSD {
+  @media only screen and (max-width: 768px) {
+    @content;
+  }
+
+}
+@mixin mobile {
+  @media only screen and (max-width: 375px) {
+    @content;
+  }
+}

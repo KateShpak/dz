@@ -1,0 +1,37 @@
+@use "../base/_variables" as *;
+h1{
+  font-weight: $fontBold;
+  font-size: 38px;
+  line-height: 46px;
+}
+
+h2{
+  font-weight: $fontBold;
+  font-size: 30px;
+  line-height: 37px;
+
+}
+
+h3{
+  font-weight: $fontBold;
+  font-size: 22px;
+  line-height: 27px;
+
+//caps
+  letter-spacing: 1px;
+  text-transform: uppercase;
+ }
+
+h4{
+  font-weight: $fontBold;
+  font-size: 14px;
+  line-height: 17px;
+
+}
+
+p{
+  font-weight: $fontNormal;
+  font-size: 16px;
+  line-height: 26px;
+  color: $colorBlack;
+}

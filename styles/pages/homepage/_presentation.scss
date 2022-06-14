@@ -1,0 +1,170 @@
+@use "../../base" as *;
+
+.presentation {
+  background: linear-gradient(228.57deg, #323264 11.93%, #323264 57.17%, #643E72 87.46%);
+  border-radius: 0 0 12px 12px;
+  position: relative;
+  &__shadow{
+    position: absolute;
+    background: #CACADB;
+    height: 10px;
+    border-radius: 0 0 12px 12px;
+    width: 98.08%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    &::after{
+      content:"";
+      display: block;
+      position: absolute;
+      background: #E7E7F2;
+      height: 10px;
+      border-radius: 0 0 12px 12px;
+      width: 98.08%;
+      left: 0;
+      right: 0;
+      top:10px;
+      margin: 0 auto;
+    }
+  }
+
+
+  &__char {
+    background: no-repeat url("/images/h-letter.png");
+    background-size: cover;
+    margin: 0 auto;
+    max-width: 872px;
+    min-height: 1000px;
+    @include flexCenterVert;
+    flex-direction: column;
+    position: relative;
+  }
+
+  &__title{
+    @include fonts($fontBold, 38px, 46px);
+    text-align: center;
+    color: $colorWhite;
+    margin: auto;
+  }
+
+  &__scroll {
+    position: absolute;
+    max-width: 42px;
+    max-height: 42px;
+    bottom: 30px;
+    content: url("/images/scroll_white.svg");
+
+    &:hover {
+      content: url("/images/scroll_red.svg");
+    }
+  }
+}
+
+//slider-----------------------------------------------------
+.slider {
+  display: flex;
+  justify-content: space-between;
+  min-height: 303px;
+  max-width: 1360px;
+  padding: 60px 0;
+  &__center{
+    margin: auto;
+  }
+  &__menu {
+    @include flexDirection;
+    row-gap: 30px;
+    min-width: 440px;
+    padding: 15px 60px 15px 0;
+    margin: 0 15px 0 0;
+    border-right: 4px solid rgba(255, 255, 255, 0.3);
+  }
+
+  &__item {
+    @include fonts($fontBold, 38px, 46px);
+    color: $colorGreyText;
+
+    &:hover {
+      color: $colorAssent;
+    }
+
+    &_active {
+      background-image: linear-gradient(90.13deg, #EF8080 0.84%, #F0145A 99.96%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+
+  &__annotation {
+    @include flexDirection;
+    justify-content: center;
+    row-gap: 30px;
+    max-width: 861px;
+    @include fonts($fontNormal, 19px, 30px);
+    color: $colorWhite;
+  }
+
+  &__title {
+    @include fonts($fontBold, 30px, 37px);
+  }
+}
+
+//services-------------------------------------------
+
+.services {
+  @include fonts($fontNormal, 16px, 26px);
+  color: $colorWhite;
+  padding: 0 0 60px 0;
+
+  &__breadcrumb {
+    display: block;
+    @include fonts($fontBold, 14px, 17px);
+    color: $colorRegular;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin: 0 0 10px 0;
+    &:hover {
+      color: $colorAssent;
+
+      &:after {
+        content: url("/images/arrov_active.svg");
+      }
+    }
+    &:after {
+      margin-left: 5px;
+      content: url("/images/arrov.svg");
+    }
+  }
+  &__item{
+    max-width: 493px;
+  }
+  &__link {
+    @include fonts($fontBold, 22px, 27px);
+    color: $colorRegular;
+    display: block;
+    margin: 0 0 15px 0;
+    &:hover {
+      color: $colorRegularHover;
+    }
+  }
+  &__title{
+    @include fonts($fontBold, 38px, 46px);
+    background-image:  linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 0 0 60px 0;
+  }
+  &__icon{
+    background: $colorWhite;
+    border-radius: 24px;
+    width: 92px;
+    height: 92px;
+    padding: 14px;
+    margin: 0 0 30px 0;
+  }
+}
+.grid__wrapper{
+  display: grid;
+  gap: 60px;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+}
+
