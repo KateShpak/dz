@@ -15,7 +15,7 @@
 			<div class="logo header__logo">
 				<a href="/">
 					<picture>
-						<source srcset="./images/Logo_white_big.png" media="(min-width: 376px)">
+						<source srcset="./images/Logo_white_big.png" media="(min-width: 576px)">
 						<source srcset="./images/Logo_white_small.png">
 						<img class="logo__img" src="./images/Logo_white_big.png" alt="logo">
 					</picture>
@@ -38,7 +38,7 @@
 				</div>
 				<nav class="menu header__menu ">
 					<a class="menu__link" href="">about us</a>
-					<a class="menu__link" href="">services</a>
+					<a class="menu__link menu__link_active" href="">services</a>
 					<a class="menu__link" href="">team</a>
 					<a class="menu__link" href="">publications</a>
 					<a class="menu__link" href="">contact</a>
@@ -48,11 +48,15 @@
 	</div>
 </header>
 <main class="main">
-	<section class="presentation">
+	<section class="presentation presentation__position">
 		<div class="container">
 			<div class="presentation__char">
 				<h1 class="presentation__title">you legal solutions provider</h1>
 				<div class="presentation__scroll">
+					<svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<circle opacity="0.5" cx="21" cy="21" r="20" stroke-width="2"/>
+						<path d="M12 18L21 27L30 18" stroke-width="2"/>
+					</svg>
 				</div>
 			</div>
 			<div class="slider slider__center">
@@ -134,74 +138,78 @@
 					</div>
 				</div>
 			</div>
-			<div class="presentation__shadow"></div>
 		</div>
 	</section>
 	<section class="staff-slider">
 		<div class="container">
-			<div class="photo staff-slider__photo">
-				<a href="#">
-					<picture>
-						<source srcset="./images/Oleks_main.jpg" media="(min-width: 1025px)">
-						<source srcset="./images/Oleks_tab.png" media="(min-width: 769px)">
-						<source srcset="./images/Oleks_main.jpg" media="(min-width: 376px)">
-						<source srcset="./images/Oleks_mob.jpg">
-						<img src="./images/Oleks_main.jpg" alt="logo">
-					</picture>
-				</a>
-				<a class="breadcrumb staff-slider__breadcrumb" href="#">команда</a>
-				<h3 class="staff-slider__title">Ми звикли брати на себе відповідальність та завжди гарантуємо чесну, вчасну допомогу, навіть у ситуаціях, коли більшість безсилі.</h3>
-				<a class="staff-slider__sub" href="#">Олександр Олександровський</a>
-				<a class="staff-slider__post" href="#">Керуючий партнер</a>
+			<div class="staff-slider__wrapper">
+				<div class="photo staff-slider__photo">
+					<a href="#">
+						<picture>
+							<source srcset="./images/Oleks_main.jpg" media="(min-width: 1025px)">
+							<source srcset="./images/Oleks_tab.png" media="(min-width: 769px)">
+							<source srcset="./images/Oleks_main.jpg" media="(min-width: 576px)">
+							<source srcset="./images/Oleks_mob.jpg">
+							<img class="staff-slider__pic" src="./images/Oleks_main.jpg" alt="logo">
+						</picture>
+					</a>
+				</div>
+				<div class="staff-slider__text">
+					<a class="breadcrumb staff-slider__breadcrumb" href="#">команда</a>
+					<h3 class="staff-title staff-slider__title">Ми звикли брати на себе відповідальність та завжди гарантуємо чесну,
+						вчасну допомогу, навіть у ситуаціях, коли більшість безсилі.</h3>
+					<a class="staff-slider__sub" href="#">Олександр Олександровський</a>
+					<a class="staff-slider__post" href="#">Керуючий партнер</a>
+				</div>
 			</div>
-			<div class="switch">
-				<div></div>
-				<div></div>
-				<div></div>
+			<div class="staff-slider__switch">
+				<div class="staff-slider__dot staff-slider__dot_active"></div>
+				<div class="staff-slider__dot"></div>
+				<div class="staff-slider__dot"></div>
 			</div>
 		</div>
 	</section>
-	<section>
+	<section class="banner">
 		<div class="container">
-			<h5>They already trust us</h5>
+			<h5 class="banner__title">They already trust us</h5>
+		<div class="banner__partners">
+			<div class="banner__item banner__item_hillel">
+				<a class="banner__link" href="#"><img src="./images/hillel.png" alt="hillel"></a>
+			</div>
+			<div class="banner__item banner__item_wannabiz">
+				<a class="banner__link" href="#"><img src="./images/wannabiz.png" alt="wannabiz"></a>
+			</div>
+			<div class="banner__item banner__item_tapgerine">
+				<a class="banner__link" href="#"><img src="./images/tapgerine.png" alt="tapgerine"></a>
+			</div>
+			<div class="banner__item banner__item_3dlook">
+				<a class="banner__link" href="#"><img src="./images/3dlook.png" alt="3dlook"></a>
+			</div>
+			<div class="banner__item banner__item_orangear">
+				<a class="banner__link" href="#"><img src="./images/orangear.png" alt="orangear"></a>
+			</div>
+			<div class="banner__item banner__item_adtelligent">
+				<a class="banner__link" href="#"><img src="./images/adtelligent.png" alt="adtelligent"></a>
+			</div>
+			<div class="banner__item banner__item_clickky">
+				<a class="banner__link" href="#"><img src="./images/clickky.png" alt="clickky"></a>
+			</div>
+			<div class="banner__item banner__item_eco-leasing">
+				<a class="banner__link" href="#"><img src="./images/eco-leasing.png" alt="eco-leasing"></a>
+			</div>
+			<div class="banner__item banner__item_infratek">
+				<a class="banner__link" href="#"><img src="./images/infratek.png" alt="infratek"></a>
+			</div>
+			<div class="banner__item banner__item_city-park">
+				<a class="banner__link" href="#"><img src="./images/city-par.png" alt="city-park"></a>
+			</div>
+			<div class="banner__item banner__item_artprint">
+				<a class="banner__link" href="#"><img src="./images/artprint.png" alt="artprint"></a>
+			</div>
+			<div class="banner__item banner__item_ultimate-card">
+				<a class="banner__link" href="#"><img src="./images/ultimate-card.png" alt="ultimate-card"></a>
+			</div>
 		</div>
-		<div class="partners">
-			<div>
-				<a href="#"><img src="./images/hillel.png" alt="hillel"></a>
-			</div>
-			<div>
-				<a href="#"><img src="./images/wannabiz.png" alt="wannabiz"></a>
-			</div>
-			<div>
-				<a href="#"><img src="./images/tapgerine.png" alt="tapgerine"></a>
-			</div>
-			<div>
-				<a href="#"><img src="./images/3dlook.png" alt="3dlook"></a>
-			</div>
-			<div>
-				<a href="#"><img src="./images/orangear.png" alt="orangear"></a>
-			</div>
-			<div>
-				<a href="#"><img src="./images/adtelligent.png" alt="adtelligent"></a>
-			</div>
-			<div>
-				<a href="#"><img src="./images/clickky.png" alt="clickky"></a>
-			</div>
-			<div>
-				<a href="#"><img src="./images/eco-leasing.png" alt="eco-leasing"></a>
-			</div>
-			<div>
-				<a href="#"><img src="./images/infratek.png" alt="infratek"></a>
-			</div>
-			<div>
-				<a href="#"><img src="./images/city-par.png" alt="city-park"></a>
-			</div>
-			<div>
-				<a href="#"><img src="./images/artprint.png" alt="artprint"></a>
-			</div>
-			<div>
-				<a href="#"><img src="./images/ultimate-card.png" alt="ultimate-card"></a>
-			</div>
 		</div>
 	</section>
 	<section>
@@ -216,7 +224,7 @@
 							<source srcset="./images/associate_descSD.jpg" media="(min-width: 1441px)">
 							<source srcset="./images/associate_tabHD.jpg " media="(min-width: 1025px)">
 							<source srcset="./images/associate_tabSD.jpg" media="(min-width: 769px)">
-							<source srcset="./images/associate_mob.jpg" media="(min-width: 376px)">
+							<source srcset="./images/associate_mob.jpg" media="(min-width: 576px)">
 							<img src="./images/associate_descSD.jpg" alt="associate">
 						</picture>
 					</a>
@@ -234,7 +242,7 @@
 							<source srcset="./images/associate_descSD.jpg" media="(min-width: 1441px)">
 							<source srcset="./images/associate_tabHD.jpg " media="(min-width: 1025px)">
 							<source srcset="./images/associate_tabSD.jpg" media="(min-width: 769px)">
-							<source srcset="./images/associate_mob.jpg" media="(min-width: 376px)">
+							<source srcset="./images/associate_mob.jpg" media="(min-width: 576px)">
 							<img src="./images/associate_descSD.jpg" alt="associate">
 						</picture>
 					</a>
@@ -253,7 +261,7 @@
 							<source srcset="./images/gdpr_descSD.jpg" media="(min-width: 1441px)">
 							<source srcset="./images/gdpr_tabHD.jpg " media="(min-width: 1025px)">
 							<source srcset="./images/gdpr_tabSD.jpg" media="(min-width: 769px)">
-							<source srcset="./images/gdpr_mob.jpg" media="(min-width: 376px)">
+							<source srcset="./images/gdpr_mob.jpg" media="(min-width: 576px)">
 							<img src="./images/gdpr_descSD.jpg" alt="gdpr">
 						</picture>
 					</a>
@@ -273,7 +281,7 @@
 							<source srcset="./images/millennials_descSD.jpg" media="(min-width: 1441px)">
 			 				<source srcset="./images/millennials_tabHD.jpg" media="(min-width: 1025px)">
 							<source srcset="./images/millennials_tabSD.jpg" media="(min-width: 769px)">
-							<source srcset="./images/millennials_mob.jpg" media="(min-width: 376px)">
+							<source srcset="./images/millennials_mob.jpg" media="(min-width: 576px)">
 							<img src="./images/millennials_tabSD.jpg" alt="gdpr">
 						</picture>
 					</a>

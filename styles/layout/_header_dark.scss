@@ -19,11 +19,6 @@
   &__logo {
     max-width: 130px;
   }
-
-  &__menu {
-    @include fonts($fontBold, 16px, 20px);
-    min-height: 24px;
-  }
 }
 
 .info {
@@ -41,9 +36,12 @@
     padding: 5px 7px;
     border-radius: 8px;
     color: $colorWhite;
+    transition: all 0.5s ease-in-out;
 
-    &:hover {
+
+    &:not(.info__item_active):hover{
       background: rgba(255, 255, 255, 0.2);
+
     }
   }
 
@@ -64,9 +62,11 @@
 
   svg {
     fill: #FFFFFF;
+    transition: all 0.6s ease-in-out;
 
     &:hover {
       fill: $colorAssent;
+
     }
   }
 }
@@ -94,12 +94,15 @@
 }
 
 .menu {
+  @include fonts($fontBold, 16px, 20px);
   display: flex;
   gap: 15px;
   &__link {
     color: $colorWhite;
+    border-bottom: transparent solid 2px;
+    transition: all 0.6s ease-in-out;
 
-    &:hover {
+    &:not(.menu__link_active):hover {
       border-bottom: $colorWhite solid 2px;
     }
 

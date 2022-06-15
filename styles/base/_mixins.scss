@@ -28,7 +28,7 @@
 
 
 //grid------------------------------------------------------------
-@mixin gridLayout($minHighUp, $minHighDown){
+@mixin gridLayout($minHighUp, $minHighDown) {
   display: grid;
   min-height: 100vh;
   grid-template: minmax($minHighUp, auto) 1fr minmax($minHighDown, auto) / 1fr;
@@ -36,6 +36,11 @@
   "header"
   "main"
   "footer";
+}
+
+  @mixin gridTable($min, $max: 1fr){
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax($min, $max));
 }
 
 // flex----------------------------------------------------

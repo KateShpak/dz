@@ -1,13 +1,17 @@
 @use "../../base" as *;
 
 .staff-slider {
+  padding: 80px 0 0 0;
+
   &__breadcrumb {
+    margin: 0 0 5px 0;
+  }
+  .breadcrumb {
     display: block;
     @include fonts($fontBold, 14px, 17px);
     color: $colorRegular;
     letter-spacing: 1px;
     text-transform: uppercase;
-    margin: 0 0 10px 0;
 
     &:hover {
       color: $colorAssent;
@@ -21,20 +25,70 @@
       content: url("/images/arrov.svg");
     }
   }
-  &__title{
+
+  &__title {
+    margin: 0 0 30px 0;
+  }
+
+  .staff-title {
     @include fonts($fontBold, 38px, 46px);
     background-image: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    margin: 0 0 60px 0;
   }
-  &__sub{
-    @include fonts($fontBold, 16px, 20px);
-    color:$colorGreyText;
-    }
 
-  &__post{
+  &__sub {
+    @include fonts($fontBold, 16px, 20px);
+    color: $colorGreyText;
+    margin: 0 0 6px 0;
+  }
+
+  &__post {
     @include fonts($fontNormal, 14px, 22px);
     color: $colorGreyText;
+  }
+
+  &__photo {
+    flex-basis: 400*100%/1600;
+    margin: 0 30px 0 0;
+    min-width: 300px;
+  }
+
+  &__pic {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+  }
+
+  &__wrapper {
+    @include flexCenterVert;
+  }
+
+  &__switch {
+    @include flexCenterHoriz;
+    gap: 15px;
+
+  }
+
+  &__text {
+    @include flexDirection;
+    align-items: flex-start;
+    flex: 0 0 75%;
+    margin: 0 30px 0 0;
+  }
+
+  &__dot {
+    width: 16px;
+    height: 16px;
+    background: $colorRegular;
+    opacity: 0.2;
+    border-radius: 50%;
+    margin: 30px 0 0 0;
+    cursor: pointer;
+
+    &_active {
+      opacity: 1;
+    }
   }
 }

@@ -1,0 +1,73 @@
+@use "../../base" as *;
+
+.banner{
+  padding: 60px 0 0 0;
+  .container{
+    max-width: 1780px;
+  }
+  &__title{
+    @include fonts($fontBold, 14px, 17px);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: $colorMain;
+    text-align: center;
+    margin: 0 0 30px 0;
+  }
+  &__partners{
+    @include gridTable(360px);
+    border-radius: 12px;
+    overflow: hidden;
+  }
+
+  &__item{
+    @include  flexCenter;
+    height: 120px;
+
+    &_hillel{
+      background: #1C4280;
+    }
+    &_wannabiz{
+      background: #143646;
+    }
+    &_tapgerine{
+      background: #F48B30;
+    }
+    &_3dlook{
+      background: #9E4DC3;
+    }
+    &_orangear{
+      background: #FD9339;
+    }
+    &_adtelligent{
+      background: #E2E2E4;
+    }
+    &_clickky{
+      background: #C71C36;
+    }
+    &_eco-leasing{
+      background: #DCF3F9;
+    }
+    &_infratek{
+      background: #EAEAEA;
+    }
+    &_city-park{
+      background: #282240;
+    }
+    &_artprint{
+      background: #1D4568;
+    }
+    &_ultimate-card{
+      background: #000000;
+    }
+  }
+
+
+
+  &__link {
+      max-width: 217px;
+    }
+
+  img{
+    width: 100%;
+  }
+}
