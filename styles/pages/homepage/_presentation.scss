@@ -93,6 +93,7 @@
   &__item {
     @include fonts($fontBold, 38px, 46px);
     color: $colorGreyText;
+    width: fit-content;
 
     &:hover {
       color: $colorAssent;
@@ -132,7 +133,7 @@
   }
 
   .breadcrumb {
-    display: block;
+    display: inline-block;
     @include fonts($fontBold, 14px, 17px);
     color: $colorRegular;
     letter-spacing: 1px;
@@ -161,6 +162,7 @@
     color: $colorRegular;
     display: block;
     margin: 0 0 15px 0;
+    width: fit-content;
 
     &:hover {
       color: $colorRegularHover;

@@ -7,11 +7,12 @@
   }
 
   .breadcrumb {
-    display: block;
+    display: inline-block;
     @include fonts($fontBold, 14px, 17px);
     color: $colorRegular;
     letter-spacing: 1px;
     text-transform: uppercase;
+
 
     &:hover {
       color: $colorAssent;
@@ -40,8 +41,7 @@
   &__link {
     @include fonts($fontBold, 16px, 20px);
     color: $colorRegular;
-    display: block;
-
+    width: fit-content;
 
     &:hover {
       color: $colorRegularHover;
