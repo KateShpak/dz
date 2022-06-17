@@ -69,6 +69,12 @@
   display: flex;
   flex-direction: column;
 }
+
+@mixin flexSeparate {
+  display: flex;
+  justify-content: space-between;
+}
+
 //-------------------------------------------------------------
 @mixin linkStyles($color, $colorHover) {
   a {
@@ -92,28 +98,39 @@
   max-width: $maxWidth;
 }
 
+//gradient-------------------------------------------------
+
+@mixin gradientText{
+  background-image:  linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 //breakpoints-----------------------------------------------
 @mixin DescHD {
   @media only screen and (max-width: 1920px) {
     @content;
   }
+}
 
-}@mixin DescSD {
+  @mixin DescSD {
   @media only screen and (max-width: 1440px) {
     @content;
   }
+}
 
-}@mixin TabHD {
+  @mixin TabHD {
   @media only screen and (max-width: 1024px) {
     @content;
   }
+}
 
-}@mixin TabSD {
+  @mixin TabSD {
   @media only screen and (max-width: 768px) {
     @content;
   }
-
 }
+
 @mixin mobile {
   @media only screen and (max-width: 375px) {
     @content;

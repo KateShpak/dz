@@ -1,5 +1,4 @@
 @use "../base" as *;
-//noinspection ALL
 
 .header {
    &__position {
@@ -12,10 +11,14 @@
   }
 
   &__wrapper {
-    @include flexCenterVert;
-    justify-content: space-between;
-  }
+    //@include flexCenterVert;
+    //justify-content: space-between;
 
+    //@include gridTable(100px,)
+    display: grid;
+    //grid-template: 1fr/ minmax(auto, 130px)  1fr minmax(auto, 1fr);
+    grid-auto-flow: column;
+  }
   &__logo {
     max-width: 130px;
   }
@@ -60,13 +63,12 @@
     color: $colorWhite;
   }
 
-  svg {
+  &__fb{
     fill: #FFFFFF;
     transition: all 0.6s ease-in-out;
 
     &:hover {
       fill: $colorAssent;
-
     }
   }
 }
@@ -95,7 +97,9 @@
 
 .menu {
   @include fonts($fontBold, 16px, 20px);
-  display: flex;
+  //display: flex;
+  display: grid;
+  grid-auto-flow: column;
   gap: 15px;
   &__link {
     color: $colorWhite;
