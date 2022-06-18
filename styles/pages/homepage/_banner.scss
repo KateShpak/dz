@@ -20,7 +20,7 @@
   }
 
   &__partners {
-    @include gridTable(360px);
+    @include gridTable(25%);
     border-radius: 12px;
     overflow: hidden;
     @include DescSD {

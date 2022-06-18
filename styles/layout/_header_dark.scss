@@ -1,7 +1,7 @@
 @use "../base" as *;
 
 .header {
-   &__position {
+  &__position {
     position: absolute;
     width: 100%;
     left: 0;
@@ -14,6 +14,9 @@
     display: grid;
     grid-template: repeat(2, minmax(auto, 1fr))/repeat(2, minmax(478px, 1fr));
     justify-items: end;
+    @include TabHD {
+      grid-template: repeat(2, minmax(auto, 1fr))/ minmax(200px, 1fr)  minmax(478px, 1fr)
+    }
   }
 }
 
@@ -34,7 +37,7 @@
     transition: all 0.5s ease-in-out;
 
 
-    &:not(.info__item_active):hover{
+    &:not(.info__item_active):hover {
       background: rgba(255, 255, 255, 0.2);
 
     }
@@ -56,7 +59,7 @@
     color: $colorWhite;
   }
 
-  &__fb{
+  &__fb {
     fill: #FFFFFF;
     transition: all 0.6s ease-in-out;
 
@@ -85,6 +88,7 @@
 .logo {
   grid-row: 1/3;
   justify-self: start;
+
   &__img {
     width: 100%;
   }
@@ -95,6 +99,7 @@
   @include gridCenter;
   grid-auto-flow: column;
   gap: 15px;
+
   &__link {
     color: $colorWhite;
     border-bottom: transparent solid 2px;

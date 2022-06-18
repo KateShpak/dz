@@ -33,11 +33,12 @@ a {
   max-width: 1660px;
   padding: 0 30px;
   margin: 0 auto;
-}
-
-@include DescSD {
-
-  .container {
-    @include containerWrap(30px, 1380px)
+  @include DescSD {
+    max-width: 1380px;
   }
+  @include TabHD {
+    max-width: 964px;
+  }
+
 }
+

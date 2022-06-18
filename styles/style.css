@@ -84,13 +84,17 @@ a {
   padding: 0 30px;
   margin: 0 auto;
 }
-
 @media only screen and (max-width: 1440px) {
   .container {
-    padding: 0 30px;
     max-width: 1380px;
   }
 }
+@media only screen and (max-width: 1024px) {
+  .container {
+    max-width: 964px;
+  }
+}
+
 .header__position {
   position: absolute;
   width: 100%;
@@ -103,6 +107,11 @@ a {
   display: grid;
   grid-template: repeat(2, minmax(auto, 1fr))/repeat(2, minmax(478px, 1fr));
   justify-items: end;
+}
+@media only screen and (max-width: 1024px) {
+  .header__wrapper {
+    grid-template: repeat(2, minmax(auto, 1fr))/minmax(200px, 1fr) minmax(478px, 1fr);
+  }
 }
 
 .info {
@@ -311,6 +320,12 @@ a {
     min-height: 799px;
   }
 }
+@media only screen and (max-width: 1024px) {
+  .presentation__char {
+    max-width: 669px;
+    min-height: 768px;
+  }
+}
 .presentation__title {
   font-weight: 700;
   font-size: 38px;
@@ -348,7 +363,7 @@ a {
   row-gap: 30px;
   min-width: 440px;
   padding: 15px 60px 15px 0;
-  margin: 0 15px 0 0;
+  margin: 0 60px 0 0;
   border-right: 4px solid rgba(255, 255, 255, 0.3);
 }
 .slider__item {
@@ -451,7 +466,7 @@ a {
 }
 .services__wrapper {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(25%, 1fr));
   gap: 60px;
 }
 
@@ -487,6 +502,11 @@ a {
 @media only screen and (max-width: 1440px) {
   .staff-slider__title {
     max-width: 860px;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .staff-slider__title {
+    max-width: 444px;
   }
 }
 .staff-slider .title {
@@ -573,7 +593,7 @@ a {
 }
 .banner__partners {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(25%, 1fr));
   border-radius: 12px;
   overflow: hidden;
 }
@@ -701,7 +721,7 @@ a {
 }
 .publications__wrapper {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
   column-gap: 30px;
 }
 .publications__pic {
