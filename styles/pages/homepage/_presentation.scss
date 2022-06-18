@@ -45,7 +45,12 @@
     @include flexCenterVert;
     flex-direction: column;
     position: relative;
+    @include DescSD{
+        max-width: 697px;
+        min-height: 799px;
+    }
   }
+
 
   &__title {
     @include fonts($fontBold, 38px, 46px);
@@ -93,6 +98,7 @@
   &__item {
     @include fonts($fontBold, 38px, 46px);
     color: $colorGreyText;
+    transition: all 0.5s ease-in-out;
     width: fit-content;
 
     &:hover {
@@ -189,7 +195,6 @@
     @include gridTable(400px);
     gap: 60px;
   }
-
 }
 
 

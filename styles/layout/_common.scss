@@ -1,7 +1,7 @@
 @use "../base/reset";
 @use "../base" as *;
 
-html{
+html {
   scroll-behavior: smooth;
 }
 
@@ -13,23 +13,31 @@ body {
   @include gridLayout(0, 150px);
 }
 
-.header{
+.header {
   grid-area: header;
 }
-.main{
+
+.main {
   grid-area: main;
 }
+
 .footer {
   grid-area: footer;
 }
 
-.container{
+a {
+  text-decoration: none;
+}
+
+.container {
   max-width: 1660px;
   padding: 0 30px;
   margin: 0 auto;
 }
 
-a{
-  text-decoration: none;
-}
+@include DescSD {
 
+  .container {
+    @include containerWrap(30px, 1380px)
+  }
+}

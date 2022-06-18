@@ -75,16 +75,22 @@ body {
   grid-area: footer;
 }
 
+a {
+  text-decoration: none;
+}
+
 .container {
   max-width: 1660px;
   padding: 0 30px;
   margin: 0 auto;
 }
 
-a {
-  text-decoration: none;
+@media only screen and (max-width: 1440px) {
+  .container {
+    padding: 0 30px;
+    max-width: 1380px;
+  }
 }
-
 .header__position {
   position: absolute;
   width: 100%;
@@ -101,8 +107,8 @@ a {
 
 .info {
   display: grid;
-  grid-auto-flow: column;
   align-items: center;
+  grid-auto-flow: column;
   row-gap: 16px;
   max-width: 478px;
 }
@@ -172,9 +178,9 @@ a {
   font-size: 16px;
   line-height: 20px;
   display: grid;
-  grid-auto-flow: column;
   align-items: center;
   justify-content: center;
+  grid-auto-flow: column;
   gap: 15px;
 }
 .menu__link {
@@ -299,6 +305,12 @@ a {
   flex-direction: column;
   position: relative;
 }
+@media only screen and (max-width: 1440px) {
+  .presentation__char {
+    max-width: 697px;
+    min-height: 799px;
+  }
+}
 .presentation__title {
   font-weight: 700;
   font-size: 38px;
@@ -344,6 +356,7 @@ a {
   font-size: 38px;
   line-height: 46px;
   color: #B3B3BA;
+  transition: all 0.5s ease-in-out;
   width: fit-content;
 }
 .slider__item:hover {
@@ -469,6 +482,12 @@ a {
 }
 .staff-slider__title {
   margin: 0 0 30px 0;
+  max-width: 1140px;
+}
+@media only screen and (max-width: 1440px) {
+  .staff-slider__title {
+    max-width: 860px;
+  }
 }
 .staff-slider .title {
   font-weight: 700;
@@ -492,9 +511,8 @@ a {
   color: #B3B3BA;
 }
 .staff-slider__photo {
-  flex-basis: 25%;
   margin: 0 30px 0 0;
-  min-width: 300px;
+  min-width: 400px;
 }
 .staff-slider__pic {
   width: 100%;
@@ -515,7 +533,6 @@ a {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  flex: 0 0 75%;
   margin: 0 30px 0 0;
 }
 .staff-slider__dot {
@@ -539,6 +556,11 @@ a {
 .banner .container {
   max-width: 1780px;
 }
+@media only screen and (max-width: 1440px) {
+  .banner .container {
+    padding: 0;
+  }
+}
 .banner__title {
   font-weight: 700;
   font-size: 14px;
@@ -554,6 +576,11 @@ a {
   grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
   border-radius: 12px;
   overflow: hidden;
+}
+@media only screen and (max-width: 1440px) {
+  .banner__partners {
+    border-radius: 0;
+  }
 }
 .banner__item {
   display: flex;

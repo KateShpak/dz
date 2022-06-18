@@ -1,11 +1,16 @@
 @use "../../base" as *;
 
-.banner{
+.banner {
   padding: 60px 0 0 0;
-  .container{
+
+  .container {
     max-width: 1780px;
+    @include DescSD {
+      padding: 0;
+    }
   }
-  &__title{
+
+  &__title {
     @include fonts($fontBold, 14px, 17px);
     letter-spacing: 1px;
     text-transform: uppercase;
@@ -13,61 +18,75 @@
     text-align: center;
     margin: 0 0 30px 0;
   }
-  &__partners{
+
+  &__partners {
     @include gridTable(360px);
     border-radius: 12px;
     overflow: hidden;
+    @include DescSD {
+      border-radius: 0;
+    }
   }
 
-  &__item{
-    @include  flexCenter;
+  &__item {
+    @include flexCenter;
     height: 120px;
 
-    &_hillel{
+    &_hillel {
       background: #1C4280;
     }
-    &_wannabiz{
+
+    &_wannabiz {
       background: #143646;
     }
-    &_tapgerine{
+
+    &_tapgerine {
       background: #F48B30;
     }
-    &_3dlook{
+
+    &_3dlook {
       background: #9E4DC3;
     }
-    &_orangear{
+
+    &_orangear {
       background: #FD9339;
     }
-    &_adtelligent{
+
+    &_adtelligent {
       background: #E2E2E4;
     }
-    &_clickky{
+
+    &_clickky {
       background: #C71C36;
     }
-    &_eco-leasing{
+
+    &_eco-leasing {
       background: #DCF3F9;
     }
-    &_infratek{
+
+    &_infratek {
       background: #EAEAEA;
     }
-    &_city-park{
+
+    &_city-park {
       background: #282240;
     }
-    &_artprint{
+
+    &_artprint {
       background: #1D4568;
     }
-    &_ultimate-card{
+
+    &_ultimate-card {
       background: #000000;
     }
   }
 
 
-
   &__link {
-      max-width: 217px;
-    }
+    max-width: 217px;
+  }
 
-  img{
+  img {
     width: 100%;
   }
 }

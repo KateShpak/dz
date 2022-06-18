@@ -18,10 +18,8 @@
 }
 
 .info {
-  display: grid;
+  @include gridCenterVert;
   grid-auto-flow: column;
-  align-items: center;
-
   row-gap: 16px;
   max-width: 478px;
 
@@ -94,10 +92,8 @@
 
 .menu {
   @include fonts($fontBold, 16px, 20px);
-  display: grid;
+  @include gridCenter;
   grid-auto-flow: column;
-  align-items: center;
-  justify-content: center;
   gap: 15px;
   &__link {
     color: $colorWhite;
