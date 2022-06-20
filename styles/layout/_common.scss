@@ -20,13 +20,13 @@ body {
 .staff-slider,
 .banner {
   padding: 0 60px;
-  @include TabSD {
-    padding: 0 30px;
-  }
 }
 
 .header {
   grid-area: header;
+  @include TabSD {
+    padding: 0 30px;
+  }
 }
 
 .main {
@@ -35,6 +35,9 @@ body {
 
 .footer {
   grid-area: footer;
+  @include TabSD {
+    padding: 0 30px;
+  }
 }
 
 a {
@@ -51,7 +54,7 @@ a {
     max-width: 904px;
   }
   @include TabSD {
-    max-width: 708px;
+    max-width: 648px;
   }
   @include mobile {
     max-width: 515px;

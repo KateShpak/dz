@@ -1,6 +1,11 @@
 @use "../base" as *;
 
 .header {
+  padding: 55px 60px;
+  @include TabSD {
+    padding: 55px 30px;
+  }
+
   &__position {
     position: absolute;
     width: 100%;

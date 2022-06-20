@@ -2,8 +2,8 @@
 
 .publications {
   padding: 90px 60px 30px 60px;
-  @include TabSD {
-    padding: 30px 0 30px 0;
+  @include TabHD{
+    padding: 30px 60px;
   }
 
   &__breadcrumb {

@@ -57,17 +57,21 @@
     @include TabSD {
       background: none;
       min-height: 1024px;
-      &::after {
+    }
+
+    &::after {
+      display: none;
+      @include TabSD {
         display: block;
         content: "";
         background: no-repeat url("/images/h-letter.png");
         background-size: cover;
-        width: 115%;
+        min-width: calc(100% + 120px + 60px);
         height: 1024px;
         position: absolute;
         z-index: 10;
         top: 0;
-        left: -122px;
+        left: -120px;
       }
     }
   }
@@ -111,7 +115,9 @@
   &__center {
     margin: auto;
     @include TabSD {
+      padding: 166px 0 60px 0;
       flex-direction: column;
+      position: relative;
     }
   }
 
@@ -125,16 +131,19 @@
     @include TabHD {
       padding: 15px 60*100/1012*1% 15px 0;
       margin-right: 60*100/1012*1%;
-      //min-width: 0px;
-      //max-width: max-content;
       min-width: min-content;
     }
     @include TabSD {
       flex-direction: row;
+      position: absolute;
+      top: 60px;
+      min-width: 20%;
+      max-width: calc(100% + 60px);
+      border-right: 0;
       border-right: 0;
       padding: 0;
-      border-right: 0;
-      margin: 0 -60px 43px 0;
+
+      margin: 0;
       overflow: scroll;
       -ms-overflow-style: none;
       &::-webkit-scrollbar {
@@ -156,6 +165,9 @@
     }
     @media only screen and (max-width: 850px) {
       min-width: min-content;
+    }
+    @include TabSD {
+      min-width: max-content;
     }
 
     &:hover {

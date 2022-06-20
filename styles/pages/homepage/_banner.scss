@@ -22,7 +22,6 @@
   &__partners {
     @include gridTable(25%);
     border-radius: 12px;
-    overflow: hidden;
     @include DescSD {
       border-radius: 0;
     }
