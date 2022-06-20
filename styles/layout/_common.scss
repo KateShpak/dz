@@ -13,6 +13,18 @@ body {
   @include gridLayout(0, 150px);
 }
 
+.header,
+.footer,
+.presentation,
+.publications,
+.staff-slider,
+.banner {
+  padding: 0 60px;
+  @include TabSD {
+    padding: 0 30px;
+  }
+}
+
 .header {
   grid-area: header;
 }
@@ -30,15 +42,19 @@ a {
 }
 
 .container {
-  max-width: 1660px;
-  padding: 0 30px;
+  max-width: 1800px;
   margin: 0 auto;
   @include DescSD {
-    max-width: 1380px;
+    max-width: 1320px;
   }
   @include TabHD {
-    max-width: 964px;
+    max-width: 904px;
   }
-
+  @include TabSD {
+    max-width: 708px;
+  }
+  @include mobile {
+    max-width: 515px;
+  }
 }
 

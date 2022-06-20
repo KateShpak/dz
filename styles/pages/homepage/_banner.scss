@@ -26,6 +26,9 @@
     @include DescSD {
       border-radius: 0;
     }
+    @include TabSD {
+      grid-template-columns: repeat(auto-fit, minmax(30.33%, 1fr));
+    }
   }
 
   &__item {

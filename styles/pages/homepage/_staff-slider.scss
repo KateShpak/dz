@@ -1,7 +1,7 @@
 @use "../../base" as *;
 
 .staff-slider {
-  padding: 80px 0 0 0;
+  padding: 80px 60px 0 60px;
 
   &__breadcrumb {
     margin: 0 0 5px 0;
@@ -43,7 +43,9 @@
   .title {
     @include fonts($fontBold, 38px, 46px);
     @include gradientText;
-
+    @include TabSD {
+      max-width: 588px;
+    }
   }
 
   &__sub {
@@ -60,29 +62,40 @@
   &__photo {
     margin: 0 30px 0 0;
     min-width: 400px;
+    @include TabHD {
+      min-width: 239px;
+    }
   }
 
   &__pic {
     width: 100%;
     height: 100%;
     object-fit: cover;
-
   }
 
   &__wrapper {
     @include flexCenterVert;
+    @include TabSD {
+      flex-direction: column;
+    }
   }
 
   &__switch {
     @include flexCenterHoriz;
     gap: 15px;
     margin: 30px 0 0 0;
+    @include TabSD {
+      margin: 60px 0 0 0;
+    }
   }
 
   &__text {
     @include flexDirection;
     align-items: flex-start;
     margin: 0 30px 0 0;
+    @include TabSD {
+      margin: 30px 0 0 0;
+    }
   }
 
   &__dot {

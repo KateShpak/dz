@@ -4,9 +4,11 @@
   @include fonts($fontNormal, 16px, 20px);
 
   &__wrapper {
-    @include flexSeparate;
     border-top: 2px solid $colorGreySeparator;
-    padding: 28px 0 30px;
+    padding: 30px 0 30px;
+    gap: 20px;
+    display: grid;
+    grid-template: repeat(2, auto)/repeat(2, auto);
   }
 
   &__link {
@@ -33,7 +35,6 @@
     @include inlineFlexCenterVert;
     gap: 10px;
     color: $colorMain;
-    margin: 0 0 16px 0;
   }
 
   &__map {
@@ -58,10 +59,15 @@
 
   &__copyright {
     color: $colorGreyText;
+    justify-self: end;
   }
 
   &__contacts {
     @include flexCenterVert;
     gap: 10px;
+    grid-row: 2/3;
+    @include TabSD {
+      grid-column: 1/3;
+    }
   }
 }
