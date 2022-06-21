@@ -58,6 +58,11 @@
       background: none;
       min-height: 1024px;
     }
+   @include mobile {
+      max-width: 523px;
+        min-height: 600px;
+    }
+
 
     &::after {
       display: none;
@@ -73,9 +78,23 @@
         top: 0;
         left: -120px;
       }
+     @include mobile {
+        height: 600px;
+        //min-width: calc(100% + 134px + 30px);
+        min-width: 523px;
+        width: 523px;
+       // left: -134px;
+       //left: -85px;
+       //margin: 0 auto;
+       top:0;
+       left: 0;
+       right: 0;
+       bottom: 0;
+       overflow: hidden;
+       display: none;
+      }
     }
   }
-
 
   &__title {
     @include fonts($fontBold, 38px, 46px);
@@ -118,6 +137,9 @@
       padding: 166px 0 60px 0;
       flex-direction: column;
       position: relative;
+      @include TabSD {
+        max-width: 515px;
+      }
     }
   }
 
@@ -150,6 +172,9 @@
         width: 0;
         background: transparent;
       }
+    }
+    @include mobile{
+      max-width: calc(100% + 30px);
     }
   }
 
@@ -223,13 +248,13 @@
     &:hover {
       color: $colorAssent;
 
-      &:after {
+      &::after {
         content: url("/images/arrov_active.svg");
 
       }
     }
 
-    &:after {
+    &::after {
       margin-left: 5px;
       content: url("/images/arrov.svg");
     }
@@ -270,6 +295,10 @@
     gap: 60px;
     @include TabSD {
       grid-template-columns: repeat(auto-fit, minmax(40%, 1fr));
+    }
+    @include mobile{
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 30px;
     }
   }
 }

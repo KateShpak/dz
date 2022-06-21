@@ -28,12 +28,18 @@
     @include TabSD {
       grid-template-columns: repeat(auto-fit, minmax(30.33%, 1fr));
     }
+    @include mobile {
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
   }
 
   &__item {
     @include flexCenter;
     height: 120px;
     padding: 10px;
+    &:nth-child(n+7){
+      display: none;
+    }
 
     &_hillel {
       background: #1C4280;

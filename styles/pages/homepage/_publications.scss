@@ -5,6 +5,9 @@
   @include TabHD{
     padding: 30px 60px;
   }
+  @include mobile{
+    padding: 30px 30px;
+  }
 
   &__breadcrumb {
     margin: 0 0 10px 0;
@@ -79,6 +82,13 @@
       grid-template-rows:  repeat(2, auto);
       article:last-child {
         grid-column-start: span 2;
+      }
+    }
+    @include mobile{
+      grid-template-columns: 1fr;
+      grid-template-rows:  auto;
+      article:last-child {
+        grid-column-start: auto;
       }
     }
   }

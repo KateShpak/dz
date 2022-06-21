@@ -2,6 +2,9 @@
 
 .staff-slider {
   padding: 80px 60px 0;
+  @include mobile{
+    padding: 80px 30px 0;
+  }
 
   &__breadcrumb {
     margin: 0 0 5px 0;
@@ -46,6 +49,9 @@
     @include TabSD {
       max-width: 588px;
     }
+    @include mobile{
+      @include fonts($fontBold, 30px, 37px);
+    }
   }
 
   &__sub {
@@ -67,6 +73,10 @@
     }
     @include TabSD {
       margin: 0;
+    }
+    @include mobile{
+      min-width: 175px;
+
     }
   }
 
@@ -99,6 +109,10 @@
     margin: 0 30px 0 0;
     @include TabSD {
       margin: 30px 0 0 0;
+    }
+    @include mobile{
+      padding: 0 30px;
+      word-break: break-word;
     }
   }
 

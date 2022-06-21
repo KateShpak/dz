@@ -13,6 +13,15 @@ body {
   @include gridLayout(0, 150px);
 }
 
+//.header,
+//.footer,
+//.presentation,
+//.publications,
+//.staff-slider,
+//.banner
+//{
+//  display: none;
+//}
 .header,
 .footer,
 .presentation,
@@ -20,6 +29,9 @@ body {
 .staff-slider,
 .banner {
   padding: 0 60px;
+  @include mobile {
+   padding: 0 30px;
+  }
 }
 
 .header {
@@ -37,6 +49,9 @@ body {
   grid-area: footer;
   @include TabSD {
     padding: 0 30px;
+  }
+  @include mobile {
+    padding: 0 20px;
   }
 }
 
@@ -56,7 +71,7 @@ a {
   @include TabSD {
     max-width: 648px;
   }
-  @include mobile {
+ @include mobile {
     max-width: 515px;
   }
 }
