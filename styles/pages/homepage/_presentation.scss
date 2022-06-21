@@ -58,40 +58,29 @@
       background: none;
       min-height: 1024px;
     }
-   @include mobile {
-      max-width: 523px;
-        min-height: 600px;
+    @include mobile {
+      max-width: 437px;
+      min-height: 656px;
     }
 
 
     &::after {
       display: none;
       @include TabSD {
-        display: block;
         content: "";
         background: no-repeat url("/images/h-letter.png");
         background-size: cover;
-        min-width: calc(100% + 120px + 60px);
-        height: 1024px;
+        display: block;
         position: absolute;
         z-index: 10;
-        top: 0;
         left: -120px;
+        height: 1024px;
+        width: calc(100% + 120px + 60px);
       }
-     @include mobile {
-        height: 600px;
-        //min-width: calc(100% + 134px + 30px);
-        min-width: 523px;
-        width: 523px;
-       // left: -134px;
-       //left: -85px;
-       //margin: 0 auto;
-       top:0;
-       left: 0;
-       right: 0;
-       bottom: 0;
-       overflow: hidden;
-       display: none;
+      @include mobile {
+        height: 656px;
+        width: calc(100% + 111px + 30px);
+        left: -111px;
       }
     }
   }
@@ -173,7 +162,7 @@
         background: transparent;
       }
     }
-    @include mobile{
+    @include mobile {
       max-width: calc(100% + 30px);
     }
   }
@@ -296,7 +285,7 @@
     @include TabSD {
       grid-template-columns: repeat(auto-fit, minmax(40%, 1fr));
     }
-    @include mobile{
+    @include mobile {
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
       gap: 30px;
     }
