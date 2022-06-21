@@ -8,12 +8,14 @@
     padding: 30px 0;
     gap: 20px;
     display: grid;
-    grid-template: repeat(2, auto)/repeat(2, auto);
+    //grid-template: repeat(2, auto)/repeat(2, auto);
+    grid-template: repeat(auto-fit, auto)/repeat(auto-fit, auto);
   }
 
   &__link {
     @include inlineFlexCenterVert;
     gap: 10px;
+    color: $colorRegular;
     transition: all 0.6s ease-in-out;
 
     &::before {
@@ -34,6 +36,7 @@
     @include inlineFlexCenterVert;
     gap: 10px;
     color: $colorMain;
+    flex-wrap: wrap;
   }
 
   &__map {
@@ -59,14 +62,14 @@
   &__copyright {
     color: $colorGreyText;
     justify-self: end;
+    white-space: nowrap;
   }
 
   &__contacts {
     @include flexCenterVert;
     gap: 10px;
     grid-row: 2/3;
-    @include TabSD {
-      grid-column: 1/3;
-    }
+    grid-column: 1/3;
+
   }
 }

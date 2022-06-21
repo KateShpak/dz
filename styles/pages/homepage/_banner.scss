@@ -33,6 +33,7 @@
   &__item {
     @include flexCenter;
     height: 120px;
+    padding: 10px;
 
     &_hillel {
       background: #1C4280;
