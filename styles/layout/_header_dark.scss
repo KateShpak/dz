@@ -35,7 +35,7 @@
       gap: 30px;
     }
     @include mobile {
-      grid-template: repeat(2, minmax(45px, 1fr))/ minmax(0px, 1fr);
+      grid-template: minmax(auto, 45px) minmax(auto, 1fr)/ minmax(0px, 1fr);
       gap: 15px;
 
     }
@@ -180,16 +180,16 @@
     display: block;
   }
   position: absolute;
-  top: 70px;
-  right: 20px;
+  top: 57px;
+  right: 12px;
   z-index: 11;
   -webkit-user-select: none;
   user-select: none;
 
   &__menu {
     position: absolute;
-    top: 87px;
-    right: -12px;
+    top: 88px;
+    right: -4px;
     width: 304px;
     margin: -100px 0 0 -50px;
     border-radius: 0 0 12px 12px;

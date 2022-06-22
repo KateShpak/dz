@@ -11,6 +11,13 @@
 
   &__breadcrumb {
     margin: 0 0 10px 0;
+    @include mobile{
+      margin: 0 0 5px 0;
+    }
+  }
+  &__photo{
+    font-size: 0;
+    line-height: 0;
   }
 
   .breadcrumb {
@@ -42,6 +49,9 @@
   .title {
     @include fonts($fontBold, 38px, 46px);
     @include gradientText;
+      @include mobile{
+        @include fonts($fontBold, 30px, 37px);
+    }
   }
 
   &__link {
