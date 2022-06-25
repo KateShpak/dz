@@ -1,9 +1,27 @@
 @use "../../base" as *;
 
-
-
 @keyframes clockwise {
   to {transform: rotate(360deg) translatez(0);}
+}
+
+.button {
+  @include fonts($fontBold, 16px, 20px);
+  box-shadow: 0 0 20px rgba(36, 163, 255, 0.5);
+  color: $colorWhite;
+  border-radius: 8px;
+  padding: 18px;
+  background: $colorRegular;
+
+  &:hover {
+    background: $colorRegularHover
+  }
+
+  &:active {
+    background: $colorRegularActive;
+  }
+  &:disabled{
+    background: $colorGreyBgAlt;
+  }
 }
 
 .communication {
@@ -137,26 +155,6 @@
     .textarea {
       min-height: 130px;
       resize: none;
-    }
-
-    .button {
-      @include fonts($fontBold, 16px, 20px);
-      box-shadow: 0 0 20px rgba(36, 163, 255, 0.5);
-      color: $colorWhite;
-      border-radius: 8px;
-      padding: 18px;
-      background: $colorRegular;
-
-      &:hover {
-        background: $colorRegularHover
-      }
-
-      &:active {
-        background: $colorRegularActive;
-      }
-      &:disabled{
-        background: $colorGreyBgAlt;
-      }
     }
 
     &__button{

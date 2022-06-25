@@ -1,9 +1,9 @@
 @use "../base" as *;
 
 .header {
-  padding: 55px 60px;
+  padding: 50px 60px 60px;
   @include TabSD {
-    padding: 55px 30px;
+    padding: 50px 60px;
   }
   @include mobile {
     padding: 0;
@@ -11,9 +11,24 @@
       max-width: 575px;
     }
   }
-  &__slug{
+
+  &__slug {
     display: none;
+
+    &_page {
+      display: inline-flex;
+      gap: 4px;
+    }
   }
+
+  &__uri {
+    @include fonts($fontNormal, 36px, 44px);
+    @include mobile() {
+      @include fonts($fontNormal, 20px, 24px);
+    }
+    color: $colorWhite;
+  }
+
   &__position {
     position: absolute;
     width: 100%;
@@ -25,10 +40,11 @@
   &__wrapper {
     display: grid;
     grid-template: repeat(2, minmax(auto, 1fr))/ minmax(200px, 1fr)  minmax(478px, 1fr);
+    gap: 16px;
     justify-items: end;
 
     @include TabHD {
-      grid-template: repeat(2, minmax(auto, 1fr))/ minmax(200px, 1fr)  minmax(478px, 1fr);
+      grid-template: repeat(2, minmax(auto, 30px))/ minmax(150px, 1fr)  minmax(478px, 1fr);
 
     }
     @include TabSD {
@@ -129,6 +145,10 @@
 }
 
 .logo-wrapper {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 4px;
+
   grid-row: 1/3;
   justify-self: start;
   @include TabSD {
@@ -276,9 +296,11 @@
         opacity: 1;
         width: 22.5px;
         transform: rotate(45deg) translate(-2px, -1px);
+
         &:first-of-type {
           background: $colorAction;
         }
+
         &:nth-last-child(2) {
           background: $colorAction;
           transform: rotate(-45deg) translate(0, -1px);

@@ -6,6 +6,7 @@
   article{
     background: $colorWhite;
     border-radius: 8px;
+    overflow: hidden;
   }
   @include TabHD{
     padding: 30px 60px;

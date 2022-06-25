@@ -1,0 +1,58 @@
+@use "../../base" as *;
+
+.publications {
+  &_page {
+    padding-top: 30px
+  }
+
+  &__tabs {
+    display: flex;
+    gap: 2px;
+    background: $colorGreySeparator;
+    border-radius: 12px;
+    padding: 2px;
+    width: 233px;
+    height: 42px;
+    margin: 0 auto 30px;
+  }
+
+  &__tab {
+    background: $colorGreySeparator;
+    font-family: $fontFamily;
+    @include fonts($fontBold, 16px, 20px);
+    color: $colorMain;
+    border-radius: 10px;
+    padding: 10px 30px;
+
+    &_active {
+      background: $colorWhite;
+    }
+    &:not(.publications__tab_active):hover{
+      background: $colorGreyBg;
+    }
+  }
+
+  &__button {
+    display: block;
+    margin: 30px auto 0;
+    padding: 18px 30px;
+  }
+
+  &__link {
+    &:hover {
+      color: $colorAssent;
+    }
+  }
+
+  &__wrapper {
+    @include TabSD {
+      article:last-child {
+        grid-column-start: inherit;
+      }
+    }
+  }
+
+  img[src=""] {
+    display: none;
+  }
+}
