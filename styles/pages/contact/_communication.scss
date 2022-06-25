@@ -1,0 +1,220 @@
+@use "../../base" as *;
+
+
+
+@keyframes clockwise {
+  to {transform: rotate(360deg) translatez(0);}
+}
+
+.communication {
+  padding: 0 120px;
+  @include TabHD{
+    padding: 0 60px;
+  }
+  @include mobile{
+    padding: 0 30px;
+  }
+
+  &__wrapper {
+    @include flexSeparate;
+    gap: 60px;
+    margin: 0 0 60px 0;
+    @include TabSD {
+      flex-direction: column;
+    }
+    @include mobile{
+      gap: 30px;
+    }
+  }
+
+  //information---------------------------------------------------------------
+
+  .information {
+    @include fonts($fontNormal, 21px, 30px);
+    width: calc(50% - 30px);
+    @include TabSD {
+      width: 100%;
+    }
+
+    &__contacts {
+      @include flexDirection;
+      padding: 30px 0;
+      margin: 0 0 35px 0;
+      border-top: 4px solid $colorGreySeparator;
+      border-bottom: 4px solid $colorGreySeparator;
+    }
+
+    &__address {
+      color: $colorMain;
+      margin: 0 0 30px 0;
+    }
+
+    &__phone {
+      color: $colorMainAlt;
+    }
+
+    &__mail {
+      color: $colorRegular;
+
+      &:hover {
+        color: $colorRegularHover;
+        transition: all 0.6s ease-in-out;
+      }
+    }
+  }
+
+  .social__link {
+    @include flexCenterVert;
+    gap: 10px;
+    @include fonts($fontBold, 12px, 16px);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: $colorRegular;
+    fill: $colorRegular;
+    transition: all 0.6s ease-in-out;
+
+    &:hover {
+      color: $colorAssent;
+      fill: $colorAssent;
+    }
+  }
+
+  //form-----------------------------------------------------------------
+
+  .form {
+    width: calc(50% - 30px);
+    padding: 30px;
+    background: $colorGreyBg;
+    border-radius: 12px;
+    @include TabSD {
+      width: 100%;
+    }
+
+    &__feedback {
+      @include flexDirection;
+    }
+
+    &__title {
+      @include fonts($fontBold, 30px, 37px);
+      @include gradientText;
+      margin: 0 0 30px 0;
+    }
+
+    &__question {
+      @include fonts($fontBold, 14px, 17px);
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: $colorGreyText;
+      margin: 15px 0;
+    }
+
+    &__item{
+      margin-bottom: 15px;
+    }
+
+    .input, .textarea,{
+      padding: 15px;
+      width: 100%;
+      font-family: $fontFamily;
+      @include fonts($fontNormal, 16px, 26px);
+      color: $colorBlack;
+      border-radius: 8px;
+      margin-bottom: 15px;
+
+      &::placeholder {
+        color: $colorGreyText;
+      }
+
+      &:focus {
+        border: 1px solid $colorRegular;
+      }
+    }
+
+    .input {
+      height: 56px;
+    }
+
+    .textarea {
+      min-height: 130px;
+      resize: none;
+    }
+
+    .button {
+      @include fonts($fontBold, 16px, 20px);
+      box-shadow: 0 0 20px rgba(36, 163, 255, 0.5);
+      color: $colorWhite;
+      border-radius: 8px;
+      padding: 18px;
+      background: $colorRegular;
+
+      &:hover {
+        background: $colorRegularHover
+      }
+
+      &:active {
+        background: $colorRegularActive;
+      }
+      &:disabled{
+        background: $colorGreyBgAlt;
+      }
+    }
+
+    &__button{
+      margin-top: 15px;
+      width: 100%;
+
+      &.response{
+        background: $colorGreyBgAlt;
+        color: $colorGreyBgAlt;
+        box-shadow: none;
+        position: relative;
+        &:hover{
+          background: $colorGreyBgAlt;
+          color: $colorGreyBgAlt;
+        }
+        &::after{
+          content: "Sent";
+          color: $colorMain;
+          position: absolute;
+          top:50%;
+          left:50%;
+          transform:translate(-50%, -50%);
+        }
+      }
+      &.progress{
+        background: $colorGreyBgAlt;
+        color: $colorGreyBgAlt;
+        box-shadow: none;
+        position: relative;
+        &:hover{
+          background: $colorGreyBgAlt;
+          color: $colorGreyBgAlt;
+        }
+        &::after{
+          content:"";
+          position: absolute;
+          left: 0;
+          right: 0;
+          top: 0;
+          bottom: 0;
+          margin : auto ;
+          display: block;
+          border: 4px solid;
+          border-color: $colorRegular $colorRegular  $colorRegular transparent;
+          width: 26.35px;
+          height: 26.35px;
+          border-radius: 50%;
+          animation: clockwise 0.8s linear infinite;
+        }
+      }
+    }
+
+    &__label.error {
+      input, textarea{
+        color: $colorError;
+        border: 1px solid $colorError;
+      }
+    }
+  }
+}
+

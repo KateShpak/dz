@@ -1,6 +1,7 @@
 @use "../../base" as *;
 
 .staff-slider {
+
   padding: 80px 60px 0;
   @include mobile{
     padding: 50px 30px 0;
@@ -70,6 +71,9 @@
   &__photo {
     margin: 0 30px 0 0;
     min-width: 400px;
+    font-size: 0;
+    line-height: 0;
+
     @include TabHD {
       min-width: 239px;
     }
@@ -78,7 +82,6 @@
     }
     @include mobile{
       min-width: 175px;
-
     }
   }
 
@@ -89,6 +92,8 @@
   }
 
   &__wrapper {
+    background: $colorGreyBg;
+    border-radius: 12px;
     @include flexCenterVert;
     @include TabSD {
       flex-direction: column;
@@ -106,11 +111,13 @@
   }
 
   &__text {
+    padding: 10px 0;
     @include flexDirection;
     align-items: flex-start;
     margin: 0 30px 0 0;
     @include TabSD {
-      margin: 30px 0 0 0;
+      padding: 0 30px;
+      margin: 20px 0 0 0;
     }
     @include mobile{
       padding: 0 30px;

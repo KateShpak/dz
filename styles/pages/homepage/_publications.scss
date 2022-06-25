@@ -1,7 +1,12 @@
 @use "../../base" as *;
 
 .publications {
+  background: $colorGreyBg;
   padding: 90px 60px 30px 60px;
+  article{
+    background: $colorWhite;
+    border-radius: 8px;
+  }
   @include TabHD{
     padding: 30px 60px;
   }

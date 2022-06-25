@@ -1,0 +1,89 @@
+@use "../base"  as *;
+
+
+.header_light {
+  padding: 50px 60px 60px;
+  @include mobile{
+    padding: 0 0 30px;
+  }
+
+  .logo-wrapper {
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 4px;
+  }
+
+  .header__slug {
+    display: inline-flex;
+    gap: 4px;
+
+    img {
+      width: 21px;
+      height: 47px;
+      @include mobile {
+        width: 12px;
+        height: 26px;
+      }
+    }
+  }
+
+  .header__uri {
+    @include fonts($fontNormal, 36px, 44px);
+    @include mobile() {
+      @include fonts($fontNormal, 20px, 24px);
+    }
+    color: $colorMain;
+  }
+
+  .menu {
+    &__link:not(.menu__link_active) {
+      color: $colorRegular;
+
+      &:not(.menu__link_active):hover {
+        border-bottom: $colorRegular solid 2px;
+      }
+    }
+  }
+
+  .info {
+    &__item_regular {
+      color: $colorGreyText;
+    }
+
+    &__fb {
+      fill: $colorGreyText;
+
+      &:hover {
+        fill: $colorRegular;
+      }
+    }
+    @include mobile{
+    background: $colorGreyBg;
+    }
+  }
+
+
+  .lang {
+    .info__item_regular {
+      &:not(.info__item_active):hover {
+        background: $colorGreyBg;
+      }
+
+      &_active {
+        color: $colorWhite;
+      }
+    }
+  }
+
+  .burger__button {
+    span {
+      background: $colorMain;
+    }
+
+    &:hover {
+      span {
+        background: $colorMain;
+      }
+    }
+  }
+}

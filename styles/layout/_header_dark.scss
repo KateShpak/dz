@@ -11,7 +11,9 @@
       max-width: 575px;
     }
   }
-
+  &__slug{
+    display: none;
+  }
   &__position {
     position: absolute;
     width: 100%;
@@ -67,10 +69,8 @@
     color: $colorWhite;
     transition: all 0.5s ease-in-out;
 
-
     &:not(.info__item_active):hover {
       background: rgba(255, 255, 255, 0.2);
-
     }
   }
 
@@ -128,7 +128,7 @@
   }
 }
 
-.logo {
+.logo-wrapper {
   grid-row: 1/3;
   justify-self: start;
   @include TabSD {
@@ -227,7 +227,7 @@
 
     &:hover {
       span {
-        background: $colorBlack;
+        background: $colorMain;
       }
 
       background: $colorGreySeparator;
@@ -276,7 +276,9 @@
         opacity: 1;
         width: 22.5px;
         transform: rotate(45deg) translate(-2px, -1px);
-
+        &:first-of-type {
+          background: $colorAction;
+        }
         &:nth-last-child(2) {
           background: $colorAction;
           transform: rotate(-45deg) translate(0, -1px);
