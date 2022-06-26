@@ -2,7 +2,16 @@
 
 .publications {
   &_page {
-    padding-top: 30px
+    padding-top: 30px;
+    padding-bottom: 60px;
+
+    .publications__wrapper {
+      @include TabSD {
+        article:last-child {
+          grid-column-start: inherit;
+        }
+      }
+    }
   }
 
   &__tabs {
@@ -26,8 +35,10 @@
 
     &_active {
       background: $colorWhite;
+      cursor: unset;
     }
-    &:not(.publications__tab_active):hover{
+
+    &:not(.publications__tab_active):hover {
       background: $colorGreyBg;
     }
   }
@@ -41,14 +52,6 @@
   &__link {
     &:hover {
       color: $colorAssent;
-    }
-  }
-
-  &__wrapper {
-    @include TabSD {
-      article:last-child {
-        grid-column-start: inherit;
-      }
     }
   }
 

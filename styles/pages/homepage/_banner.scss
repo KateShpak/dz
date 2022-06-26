@@ -38,8 +38,8 @@
     @include flexCenter;
     height: 120px;
     padding: 10px;
-    @include mobile{
-      &:nth-child(n+7){
+    @include mobile {
+      &:nth-child(n+7) {
         display: none;
       }
     }

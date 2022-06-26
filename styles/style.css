@@ -148,7 +148,7 @@ input, textarea, button {
 }
 @media only screen and (max-width: 768px) {
   .header {
-    padding: 50px 60px;
+    padding: 50px 53px 60px;
   }
 }
 @media only screen and (max-width: 575px) {
@@ -194,7 +194,7 @@ input, textarea, button {
 }
 @media only screen and (max-width: 1024px) {
   .header__wrapper {
-    grid-template: repeat(2, minmax(auto, 30px))/minmax(150px, 1fr) minmax(478px, 1fr);
+    grid-template: repeat(2, minmax(auto, 27px))/minmax(150px, 1fr) minmax(478px, 1fr);
   }
 }
 @media only screen and (max-width: 768px) {
@@ -207,7 +207,7 @@ input, textarea, button {
 @media only screen and (max-width: 575px) {
   .header__wrapper {
     grid-template: minmax(auto, 45px) minmax(auto, 1fr)/minmax(0px, 1fr);
-    gap: 15px;
+    gap: 0;
   }
 }
 
@@ -317,6 +317,7 @@ input, textarea, button {
   .logo-wrapper {
     padding: 0 0 0 15px;
     height: 57px;
+    align-content: flex-end;
   }
 }
 .logo-wrapper__img {
@@ -467,9 +468,14 @@ input, textarea, button {
 .header_light {
   padding: 50px 60px 60px;
 }
+@media only screen and (max-width: 768px) {
+  .header_light {
+    padding: 50px 53px 60px;
+  }
+}
 @media only screen and (max-width: 575px) {
   .header_light {
-    padding: 0 0 30px;
+    padding: 0;
   }
 }
 .header_light .logo-wrapper {
@@ -950,6 +956,7 @@ input, textarea, button {
   display: block;
   margin: 0 0 15px 0;
   width: fit-content;
+  transition: all 0.4s ease-in-out;
 }
 .services__link:hover {
   color: #F0145A;
@@ -1134,7 +1141,7 @@ input, textarea, button {
   }
 }
 .staff-slider__text {
-  padding: 10px 0;
+  padding: 30px 0;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -1142,13 +1149,12 @@ input, textarea, button {
 }
 @media only screen and (max-width: 768px) {
   .staff-slider__text {
-    padding: 0 30px;
-    margin: 20px 0 0 0;
+    padding: 30px;
+    margin: 0;
   }
 }
 @media only screen and (max-width: 575px) {
   .staff-slider__text {
-    padding: 0 30px;
     word-break: break-word;
   }
 }
@@ -1434,7 +1440,7 @@ input, textarea, button {
 }
 @media only screen and (max-width: 575px) {
   .communication {
-    padding: 0 30px;
+    padding: 30px 30px 0;
   }
 }
 .communication__wrapper {
@@ -1621,12 +1627,12 @@ input, textarea, button {
 }
 @media only screen and (max-width: 1024px) {
   .presentation__position_page {
-    padding: calc(400px - (178px + 62 * (100vw - 769px) / 255)) 60px 0;
+    padding: calc(400px - (160px + 62 * (100vw - 769px) / 255)) 60px 0;
   }
 }
 @media only screen and (max-width: 768px) {
   .presentation__position_page {
-    padding: 269px 60px 0;
+    padding: 270px 60px 0;
   }
 }
 @media only screen and (max-width: 575px) {
@@ -1646,6 +1652,12 @@ input, textarea, button {
 
 .publications_page {
   padding-top: 30px;
+  padding-bottom: 60px;
+}
+@media only screen and (max-width: 768px) {
+  .publications_page .publications__wrapper article:last-child {
+    grid-column-start: inherit;
+  }
 }
 .publications__tabs {
   display: flex;
@@ -1669,6 +1681,7 @@ input, textarea, button {
 }
 .publications__tab_active {
   background: #FFFFFF;
+  cursor: unset;
 }
 .publications__tab:not(.publications__tab_active):hover {
   background: #F5F5FA;
@@ -1680,11 +1693,6 @@ input, textarea, button {
 }
 .publications__link:hover {
   color: #F0145A;
-}
-@media only screen and (max-width: 768px) {
-  .publications__wrapper article:last-child {
-    grid-column-start: inherit;
-  }
 }
 .publications img[src=""] {
   display: none;

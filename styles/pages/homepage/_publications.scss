@@ -3,25 +3,28 @@
 .publications {
   background: $colorGreyBg;
   padding: 90px 60px 30px 60px;
-  article{
+
+  article {
     background: $colorWhite;
     border-radius: 8px;
     overflow: hidden;
   }
-  @include TabHD{
+
+  @include TabHD {
     padding: 30px 60px;
   }
-  @include mobile{
+  @include mobile {
     padding: 30px 30px;
   }
 
   &__breadcrumb {
     margin: 0 0 10px 0;
-    @include mobile{
+    @include mobile {
       margin: 0 0 5px 0;
     }
   }
-  &__photo{
+
+  &__photo {
     font-size: 0;
     line-height: 0;
   }
@@ -55,8 +58,8 @@
   .title {
     @include fonts($fontBold, 38px, 46px);
     @include gradientText;
-      @include mobile{
-        @include fonts($fontBold, 30px, 37px);
+    @include mobile {
+      @include fonts($fontBold, 30px, 37px);
     }
   }
 
@@ -100,7 +103,7 @@
         grid-column-start: span 2;
       }
     }
-    @include mobile{
+    @include mobile {
       grid-template-columns: 1fr;
       grid-template-rows:  auto;
       article:last-child {

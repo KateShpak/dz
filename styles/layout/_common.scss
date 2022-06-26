@@ -21,7 +21,7 @@ body {
 .banner {
   padding: 0 60px;
   @include mobile {
-   padding: 0 30px;
+    padding: 0 30px;
   }
 }
 
@@ -67,7 +67,7 @@ input, textarea, button {
   @include TabSD {
     max-width: 648px;
   }
- @include mobile {
+  @include mobile {
     max-width: 515px;
   }
 }

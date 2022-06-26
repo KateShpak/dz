@@ -3,7 +3,7 @@
 .header {
   padding: 50px 60px 60px;
   @include TabSD {
-    padding: 50px 60px;
+    padding: 50px 53px 60px;
   }
   @include mobile {
     padding: 0;
@@ -44,7 +44,7 @@
     justify-items: end;
 
     @include TabHD {
-      grid-template: repeat(2, minmax(auto, 30px))/ minmax(150px, 1fr)  minmax(478px, 1fr);
+      grid-template: repeat(2, minmax(auto, 27px))/ minmax(150px, 1fr)  minmax(478px, 1fr);
 
     }
     @include TabSD {
@@ -54,8 +54,7 @@
     }
     @include mobile {
       grid-template: minmax(auto, 45px) minmax(auto, 1fr)/ minmax(0px, 1fr);
-      gap: 15px;
-
+      gap: 0;
     }
   }
 }
@@ -159,6 +158,7 @@
   @include mobile {
     padding: 0 0 0 15px;
     height: 57px;
+    align-content: flex-end;
   }
 
   &__img {

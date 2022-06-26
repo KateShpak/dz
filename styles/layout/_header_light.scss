@@ -3,8 +3,11 @@
 
 .header_light {
   padding: 50px 60px 60px;
-  @include mobile{
-    padding: 0 0 30px;
+  @include TabSD {
+    padding: 50px 53px 60px;
+  }
+  @include mobile {
+    padding: 0;
   }
 
   .logo-wrapper {
@@ -57,8 +60,9 @@
         fill: $colorRegular;
       }
     }
-    @include mobile{
-    background: $colorGreyBg;
+
+    @include mobile {
+      background: $colorGreyBg;
     }
   }
 

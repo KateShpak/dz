@@ -1,21 +1,21 @@
 @use "../../base" as *;
 
-.presentation__position_page{
+.presentation__position_page {
   padding: 178px 60px 0;
   @include TabHD {
-    padding: calc(400px - (178px + (240 - 178) * ((100vw - 769px) / (1024 - 769)))) 60px 0; //todo
+    padding: calc(400px - (160px + (240 - 178) * ((100vw - 769px) / (1024 - 769)))) 60px 0;
   }
   @include TabSD {
-    padding: 269px 60px 0;
+    padding: 270px 60px 0;
   }
   @include mobile {
     padding: 135px 30px 0;
   }
 }
 
-.banner_page{
+.banner_page {
   padding: 80px 0 60px 0;
-  @include DescSD{
+  @include DescSD {
     padding: 80px 0 0;
   }
 }

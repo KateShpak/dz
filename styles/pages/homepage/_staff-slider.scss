@@ -3,7 +3,7 @@
 .staff-slider {
 
   padding: 80px 60px 0;
-  @include mobile{
+  @include mobile {
     padding: 50px 30px 0;
   }
 
@@ -41,7 +41,7 @@
     @include TabHD {
       max-width: 444px;
     }
-    @include mobile{
+    @include mobile {
       margin: 0 0 30px 0;
     }
   }
@@ -52,7 +52,7 @@
     @include TabSD {
       max-width: 588px;
     }
-    @include mobile{
+    @include mobile {
       @include fonts($fontBold, 30px, 37px);
     }
   }
@@ -80,7 +80,7 @@
     @include TabSD {
       margin: 0;
     }
-    @include mobile{
+    @include mobile {
       min-width: 175px;
     }
   }
@@ -111,16 +111,15 @@
   }
 
   &__text {
-    padding: 10px 0;
+    padding: 30px 0;
     @include flexDirection;
     align-items: flex-start;
     margin: 0 30px 0 0;
     @include TabSD {
-      padding: 0 30px;
-      margin: 20px 0 0 0;
+      padding: 30px;
+      margin: 0;
     }
-    @include mobile{
-      padding: 0 30px;
+    @include mobile {
       word-break: break-word;
     }
   }
