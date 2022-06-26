@@ -38,7 +38,7 @@
   }
 
   &__char {
-    background: no-repeat url("/images/h-letter.png");
+    background: no-repeat url("../images/h-letter.png");
     background-size: cover;
     margin: 0 auto;
     max-width: 872px;
@@ -68,7 +68,7 @@
       display: none;
       @include TabSD {
         content: "";
-        background: no-repeat url("/images/h-letter.png");
+        background: no-repeat url("../images/h-letter.png");
         background-size: cover;
         display: block;
         position: absolute;
@@ -246,14 +246,14 @@
       color: $colorAssent;
 
       &::after {
-        content: url("/images/arrov_active.svg");
+        content: url("../images/arrov_active.svg");
 
       }
     }
 
     &::after {
       margin-left: 5px;
-      content: url("/images/arrov.svg");
+      content: url("../images/arrov.svg");
     }
   }
 

@@ -40,13 +40,13 @@
       color: $colorAssent;
 
       &:after {
-        content: url("/images/arrov_active.svg");
+        content: url("../images/arrov_active.svg");
       }
     }
 
     &:after {
       margin-left: 5px;
-      content: url("/images/arrov.svg");
+      content: url("../images/arrov.svg");
     }
   }
 
